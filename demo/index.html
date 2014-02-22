@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Doc Collapse Demo</title>
+    </head>
+    <body>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="../src/jquery.doccollapse.js"></script>
+        <ul id="demo">
+        	<li>
+        		<h2>Doc Collapse Demo</h2>
+        		<p>Here's some demo text.</p>
+        		<ul>
+        			<li>
+        				<h3>This header is hidden!</h3>
+        				<p>...and I'm the hiddent text!</p>
+        				<ul>
+        					<li>Don't worry,</li>
+        					<li>I know when lists</li>
+        					<li>contain headers</li>
+        					<li>and don't collapse them.</li>
+        				</ul>
+        			</li>
+        			<li>
+        				<h5>Tiny header</h5>
+        				<p>
+        					The arrows change size depending on how big your header is.
+        				</p>
+        			</li>
+        		</ul>
+        	</li>
+        	<li>
+        		<h2>What happens when anchors are referenced?</h2>
+        		<p><a href="#anchor">Click me</a> to find out.</p>
+        		<ul>
+        			<li>
+        				<h3>Don't mind me...</h3>
+        				<p>This happens when I'm linked to from an external page too.</p>
+        				<ul>
+        					<li>
+        						<h4 id="anchor">Success!</h4>
+        						<p>Did you click the link?</p>
+        					</li>
+        				</ul>
+        			</li>
+        		</ul>
+        	</li>
+        </ul>
+        <script>
+            $(document).ready(function() {
+            	$.DocCollapse('demo')
+            })
+        </script>
+    </body>
+</html>
