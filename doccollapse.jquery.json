@@ -8,7 +8,7 @@
     "plugins",
     "collapsible"
   ],
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "Brian Conn",
     "url": "https://github.com/theconnman"
@@ -28,6 +28,7 @@
   "bugs": "https://github.com/TheConnMan/DocCollapse/issues",
   "homepage": "http://http://augurworks.net:1080/docs",
   "docs": "https://github.com/TheConnMan/DocCollapse#readme",
+  "demo": "http://http://augurworks.net:1080/docs",
   "download": "https://github.com/TheConnMan/DocCollapse/archive/master.zip",
   "dependencies": {
     "jquery": ">=1.4"
