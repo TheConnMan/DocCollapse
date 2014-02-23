@@ -13,7 +13,7 @@ Using DocCollapse is very easy. First add the jquery.doccollapse.js to your web 
 
 	<ul id="root">
 		<li>
-			<h1>Header</hi>
+			<h1>Header</h1>
 			<p>Content</p>
 		</li>
 	</ul>
