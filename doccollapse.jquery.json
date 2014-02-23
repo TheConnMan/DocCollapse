@@ -1,5 +1,5 @@
 {
-  "name": "DocCollapse",
+  "name": "doccollapse",
   "title": "Doc Collapse",
   "description": "A jQuery plugin which creates a collapsible menu which is used best for documentation.",
   "keywords": [
@@ -8,7 +8,7 @@
     "plugins",
     "collapsible"
   ],
-  "version": "0.1",
+  "version": "0.1.0",
   "author": {
     "name": "Brian Conn",
     "url": "https://github.com/theconnman"
