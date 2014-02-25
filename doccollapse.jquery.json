@@ -7,7 +7,7 @@
     "docs",
     "plugins",
     "collapsible",
-    "menu
+    "menu"
   ],
   "version": "0.2.0",
   "author": {
@@ -27,9 +27,9 @@
     }
   ],
   "bugs": "https://github.com/TheConnMan/DocCollapse/issues",
-  "homepage": "http://http://augurworks.net:1080/docs",
+  "homepage": "http://http://augurworks.net:8080/docs",
   "docs": "https://github.com/TheConnMan/DocCollapse#readme",
-  "demo": "http://http://augurworks.net:1080/docs",
+  "demo": "http://http://augurworks.net:8080/docs",
   "download": "https://github.com/TheConnMan/DocCollapse/archive/master.zip",
   "dependencies": {
     "jquery": ">=1.4"
