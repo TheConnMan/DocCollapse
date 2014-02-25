@@ -27,9 +27,9 @@
     }
   ],
   "bugs": "https://github.com/TheConnMan/DocCollapse/issues",
-  "homepage": "http://http://augurworks.net:8080/docs",
+  "homepage": "http://augurworks.net:8080/docs",
   "docs": "https://github.com/TheConnMan/DocCollapse#readme",
-  "demo": "http://http://augurworks.net:8080/docs",
+  "demo": "http://augurworks.net:8080/docs",
   "download": "https://github.com/TheConnMan/DocCollapse/archive/master.zip",
   "dependencies": {
     "jquery": ">=1.4"
