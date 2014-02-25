@@ -5,7 +5,7 @@ The DocCollapse plugin is a very small, simple plugin that helps collapse large 
 
 # Setup #
 
-To setup DocCollapse download the zip, unpack it, and move jquery.doccollapse.js into a folder in your project. Right now the images were a little tricky to get working so the two arrow images need to be in the /images folder of your project. Please let me know if you know of a better way to manage referenced images. After that you're ready to use DocCollapse.
+To setup DocCollapse download the zip, unpack it, and move jquery.doccollapse.js into a folder in your project. Include the file in a web page and you're ready to use DocCollapse.
 
 # Basic Usage #
 
