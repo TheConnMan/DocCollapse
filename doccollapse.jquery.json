@@ -9,7 +9,7 @@
     "collapsible",
     "menu"
   ],
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": {
     "name": "Brian Conn",
     "url": "https://github.com/theconnman"
@@ -30,7 +30,7 @@
   "homepage": "http://augurworks.net:8080/docs",
   "docs": "https://github.com/TheConnMan/DocCollapse#readme",
   "demo": "http://augurworks.net:8080/docs",
-  "download": "https://github.com/TheConnMan/DocCollapse/archive/master.zip",
+  "download": "https://github.com/TheConnMan/DocCollapse/archive/0.2.5.zip",
   "dependencies": {
     "jquery": ">=1.4"
   }

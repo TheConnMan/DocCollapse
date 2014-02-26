@@ -21,7 +21,7 @@ Using DocCollapse is very easy. First add the jquery.doccollapse.js to your web 
 The code block above shows the simplest example of a valid DocCollapse snippet. To initialize this block the following JavaScript would be run.
 
 	$(document).ready(function() {
-    	$.DocCollapse('root')
+    	$('#root').DocCollapse
     })
 
 On page load DocCollapse finds the `<ul>` with ID `root`, applies relevant formatting, and cascades down into all enclosed content. The resulting HTML will be a single header with the text `Header` and an arrow to the left of it. This header can then be clicked on to reveal the hidden text `Content`.
