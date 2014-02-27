@@ -3,6 +3,11 @@ DocCollapse
 
 The DocCollapse plugin is a very small, simple plugin that helps collapse large bodies of text (e.g. software documentation) into a manageable, expandable set of nested headers and text. The inspiration for creating this plugin was my startup's website docs located at [augurworks.net](http://augurworks.net:8080/docs). Setup and usage is described below.
 
+# Demo #
+[augurworks.net](http://augurworks.net:8080/docs)
+
+The best demo is that of my startup. Feedback is greatly appreciated.
+
 # Setup #
 
 To setup DocCollapse download the zip, unpack it, and move jquery.doccollapse.js into a folder in your project. Include the file in a web page and you're ready to use DocCollapse.
