@@ -28,7 +28,7 @@
   ],
   "bugs": "https://github.com/TheConnMan/DocCollapse/issues",
   "homepage": "http://augurworks.net:8080/docs",
-  "docs": "https://github.com/TheConnMan/DocCollapse#readme",
+  "docs": "http://theconnman.github.io/DocCollapse/",
   "demo": "http://augurworks.net:8080/docs",
   "download": "https://github.com/TheConnMan/DocCollapse/archive/0.2.5.zip",
   "dependencies": {
