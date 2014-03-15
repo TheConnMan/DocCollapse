@@ -42,3 +42,46 @@ Once the content has been compressed it is a little difficult to reference. A li
 A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessable docs. An example can be found in the demo or on my startup's website [here](http://augurworks.net:8080/docs#inputType).
 
 That's about it. I've done the best I can to make sure content that shouldn't be formatted (i.e. unordered lists which don't have child headers) aren't formatted in ways they shouldn't, but please let me know all feedback you have.
+
+## Reserved Tags ##
+A reasonable question after seeing how tags such as `<ul>`, `<li>`, and any header tag are transformed is: What happens if I want to use those tags in my content?
+
+The good news is that DocCollapse is smart enough to know when you're using them in content. Imagine using DocCollapse on the code block below.
+
+	<ul id="root">
+		<li>
+			<h1>Header</h1>
+			<p>Content</p>
+			<h2>Content Header</h2>
+			<ul>
+				<li>List</li>
+				<li>Within</li>
+				<li>Content</li>
+			</ul>
+		</li>
+	</ul>
+
+The block would result in the following page.
+
+![](https://raw.github.com/TheConnMan/DocCollapse/master/demo/Example.png)
+
+DocCollapse manages this by only converting the first header in any list item to a collapsible header. Closing the list item before the second header would trigger a second collapsible header, as seen below.
+
+	<ul id="root">
+		<li>
+			<h1>Header</h1>
+			<p>Content</p>
+		</li>
+		<li>
+			<h2>Content Header</h2>
+			<ul>
+				<li>List</li>
+				<li>Within</li>
+				<li>Content</li>
+			</ul>
+		</li>
+	</ul>
+
+![](https://raw.github.com/TheConnMan/DocCollapse/master/demo/Example2.png)
+
+Unordered lists are only changed if they contain headers. Lists whose children have no headers are left alone.

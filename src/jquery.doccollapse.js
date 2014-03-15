@@ -14,11 +14,15 @@
 			
 	    	$.docCollapse.setChildren(me);
 	    	$(me).find('li').css('margin-left', opts.margin + 'px');
-	    	$(me).find(':header').css('margin-left', '-' + opts.margin + 'px');
+	    	$(me).find('li').each(function() {
+	    		$(this).find(':header').first().css('margin-left', '-' + opts.margin + 'px');
+	    	})
 	    	$(me).find('li').children(':header').parent().css('list-style-type', 'none');
 	    	$(me).find(':header').css('margin-bottom', '15px');
 	    	$(me).find(':header').css('margin-top', '15px');
-	    	$(me).find(':header').hover(function() { $(this).css('cursor', 'pointer'); });
+	    	$(me).find('li').each(function() {
+	    		$(this).find(':header').first().hover(function() { $(this).css('cursor', 'pointer'); });
+	    	})
 	    	$.docCollapse.closeAll(me);
 	    	var hash = $(location).attr('hash');
 	    	
@@ -40,8 +44,14 @@
 	    	$(me).children().children().find('.DCarrow').show();
 	    	$(me).children().children('p').hide();
 	    	$(me).find(':header').removeClass('DCOpen');
-	    	$(me).find(':header').addClass('DCClosed');
+	    	$(me).find('li').each(function() {
+	    		$(this).find(':header').first().addClass('DCClosed');
+	    	})
 	    	$(me).find(':header').find('img').attr('src', rightSrc);
+	    	$(me).children().each(function() {
+	    		$(this).children(':header').hide();
+	    		$(this).children(':header').first().show();
+	    	})
 	    },
 	    
 	    expand: function(me) {
@@ -50,7 +60,9 @@
 			$(me).children(':header').removeClass('DCClosed');
 	    	$(me).children().show();
 	    	$(me).children('ul').children('li').show();
-	    	$(me).children('ul').children('li').children(':header').show();
+	    	$(me).children('ul').children('li').each(function() {
+	    		$(this).children(':header').first().show();
+	    	})
 	    },
 	    
 	    close: function(me) {
@@ -60,21 +72,23 @@
 	    	$(me).children('ul').children('li').children(':header').hide();
 	    	$(me).children('ul').children('li').hide();
 	    	$(me).children().hide();
-	    	$(me).children(':header').show();
+	    	$(me).children(':header').first().show();
 	    },
 	    
 	    setChildren: function(me) {
-	    	$(me).children('li').children(':header').each(function() {
-	        	$(this).html('<img class="DCarrow" src="' + rightSrc + '" style="height: ' + $(this).height() * .75 + 'px; padding-right: 5px; display: inline;" />' + $(this).html());
-				$(this).addClass('DCClosed');
-	    		$(this).click(function() {
-	    			if ($(this).hasClass('DCClosed')) {
-	    				$.docCollapse.expand($(this).parent());
-	    			} else {
-	    				$.docCollapse.close($(this).parent())
-	    			}
-	    		});
-	    		$.docCollapse.setChildren($(this).parent().children('ul'))
+	    	$(me).children('li').each(function() {
+	    		$(this).children(':header').first().each(function() {
+		        	$(this).html('<img class="DCarrow" src="' + rightSrc + '" style="height: ' + $(this).height() * .75 + 'px; padding-right: 5px; display: inline;" />' + $(this).html());
+					$(this).addClass('DCClosed');
+		    		$(this).click(function() {
+		    			if ($(this).hasClass('DCClosed')) {
+		    				$.docCollapse.expand($(this).parent());
+		    			} else {
+		    				$.docCollapse.close($(this).parent())
+		    			}
+		    		});
+		    		$.docCollapse.setChildren($(this).parent().children('ul'))
+		    	})
 	    	})
 	    },
 	    

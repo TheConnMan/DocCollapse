@@ -1,7 +1,7 @@
 {
   "name": "doccollapse",
   "title": "Doc Collapse",
-  "description": "A jQuery plugin which creates a collapsible menu which is used best for documentation.",
+  "description": "A jQuery plugin which creates a collapsible menu which is used best for large, unwieldy docs.",
   "keywords": [
     "jquery",
     "docs",
@@ -9,7 +9,7 @@
     "collapsible",
     "menu"
   ],
-  "version": "0.2.5",
+  "version": "0.2.6",
   "author": {
     "name": "Brian Conn",
     "url": "https://github.com/theconnman"
@@ -30,7 +30,7 @@
   "homepage": "http://augurworks.net:8080/docs",
   "docs": "http://theconnman.github.io/DocCollapse/",
   "demo": "http://augurworks.net:8080/docs",
-  "download": "https://github.com/TheConnMan/DocCollapse/archive/0.2.5.zip",
+  "download": "https://github.com/TheConnMan/DocCollapse/archive/0.2.6.zip",
   "dependencies": {
     "jquery": ">=1.4"
   }
