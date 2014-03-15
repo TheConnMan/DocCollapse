@@ -85,3 +85,19 @@ DocCollapse manages this by only converting the first header in any list item to
 ![](https://raw.github.com/TheConnMan/DocCollapse/master/demo/Example2.png)
 
 Unordered lists are only changed if they contain headers. Lists whose children have no headers are left alone.
+
+## Options ##
+
+Options are added as easily as passing an object with your options to the docCollapse constructor. Below is an example.
+
+	$('#root').docCollapse({
+		margin: 10,
+		color: blue
+	});
+
+Here is a comprehensive list of available options and their defaults.
+
+- **Margin** [default: 20]
+	- Margin added to the left for each additional indentation.
+- **Color** [default: black]
+	- Color of the SVG arrows.
