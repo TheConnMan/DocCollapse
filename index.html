@@ -64,7 +64,7 @@
 <p>The code block above shows the simplest example of a valid DocCollapse snippet. To initialize this block the following JavaScript would be run.</p>
 
 <pre><code>$(document).ready(function() {
-    $('#root').DocCollapse
+    $('#root').docCollapse()
 })
 </code></pre>
 
@@ -80,9 +80,56 @@
 
 <p>Once the content has been compressed it is a little difficult to reference. A link from another page (perhaps to a certain part of the docs with an anchor) would not help much if all the docs contents was compressed. This is where DocCollapse can help.</p>
 
-<p>A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessible docs. An example can be found in the demo or on my startup's website <a href="http://augurworks.net:8080/docs#inputType">here</a>.</p>
+<p>A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessable docs. An example can be found in the demo or on my startup's website <a href="http://augurworks.net:8080/docs#inputType">here</a>.</p>
 
 <p>That's about it. I've done the best I can to make sure content that shouldn't be formatted (i.e. unordered lists which don't have child headers) aren't formatted in ways they shouldn't, but please let me know all feedback you have.</p>
+
+<h2>
+<a name="reserved-tags" class="anchor" href="#reserved-tags"><span class="octicon octicon-link"></span></a>Reserved Tags</h2>
+
+<p>A reasonable question after seeing how tags such as <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>, and any header tag are transformed is: What happens if I want to use those tags in my content?</p>
+
+<p>The good news is that DocCollapse is smart enough to know when you're using them in content. Imagine using DocCollapse on the code block below.</p>
+
+<pre><code>&lt;ul id="root"&gt;
+    &lt;li&gt;
+        &lt;h1&gt;Header&lt;/h1&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+        &lt;h2&gt;Content Header&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;List&lt;/li&gt;
+            &lt;li&gt;Within&lt;/li&gt;
+            &lt;li&gt;Content&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>The block would result in the following page.</p>
+
+<p><img src="https://raw.github.com/TheConnMan/DocCollapse/master/demo/Example.png" alt=""></p>
+
+<p>DocCollapse manages this by only converting the first header in any list item to a collapsible header. Closing the list item before the second header would trigger a second collapsible header, as seen below.</p>
+
+<pre><code>&lt;ul id="root"&gt;
+    &lt;li&gt;
+        &lt;h1&gt;Header&lt;/h1&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h2&gt;Content Header&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;List&lt;/li&gt;
+            &lt;li&gt;Within&lt;/li&gt;
+            &lt;li&gt;Content&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p><img src="https://raw.github.com/TheConnMan/DocCollapse/master/demo/Example2.png" alt=""></p>
+
+<p>Unordered lists are only changed if they contain headers. Lists whose children have no headers are left alone.</p>
       </section>
     </div>
 
