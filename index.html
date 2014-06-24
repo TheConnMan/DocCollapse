@@ -34,14 +34,12 @@
         <h1>
 <a name="doccollapse" class="anchor" href="#doccollapse"><span class="octicon octicon-link"></span></a>DocCollapse</h1>
 
-<p>The DocCollapse plugin is a very small, simple plugin that helps collapse large bodies of text (e.g. software documentation) into a manageable, expandable set of nested headers and text. The inspiration for creating this plugin was my startup's website docs located at <a href="http://augurworks.net:8080/docs">augurworks.net</a>. Setup and usage is described below.</p>
+<p>The DocCollapse plugin is a very small, simple plugin that helps collapse large bodies of text (e.g. software documentation) into a manageable, expandable set of nested headers and text.</p>
 
 <h1>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h1>
 
-<p><a href="http://augurworks.net:8080/docs">augurworks.net</a></p>
-
-<p>The best demo is that of my startup. Feedback is greatly appreciated.</p>
+<p><a href="https://theconnman.github.io/DocCollapse">theconnman.github.io/DocCollapse</a></p>
 
 <h1>
 <a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h1>
@@ -80,7 +78,7 @@
 
 <p>Once the content has been compressed it is a little difficult to reference. A link from another page (perhaps to a certain part of the docs with an anchor) would not help much if all the docs contents was compressed. This is where DocCollapse can help.</p>
 
-<p>A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessable docs. An example can be found in the demo or on my startup's website <a href="http://augurworks.net:8080/docs#inputType">here</a>.</p>
+<p>A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessable docs.</p>
 
 <p>That's about it. I've done the best I can to make sure content that shouldn't be formatted (i.e. unordered lists which don't have child headers) aren't formatted in ways they shouldn't, but please let me know all feedback you have.</p>
 
@@ -130,6 +128,36 @@
 <p><img src="https://raw.github.com/TheConnMan/DocCollapse/master/demo/Example2.png" alt=""></p>
 
 <p>Unordered lists are only changed if they contain headers. Lists whose children have no headers are left alone.</p>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p>Options are added as easily as passing an object with your options to the docCollapse constructor. Below is an example.</p>
+
+<pre><code>$('#root').docCollapse({
+    margin: 10,
+    color: blue
+});
+</code></pre>
+
+<p>Here is a comprehensive list of available options and their defaults.</p>
+
+<ul>
+<li>
+<strong>Margin</strong> [default: 20]
+
+<ul>
+<li>Margin added to the left for each additional indentation.</li>
+</ul>
+</li>
+<li>
+<strong>Color</strong> [default: black]
+
+<ul>
+<li>Color of the SVG arrows.</li>
+</ul>
+</li>
+</ul>
       </section>
     </div>
 
