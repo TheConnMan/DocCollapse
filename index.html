@@ -4,11 +4,13 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Doccollapse : Repository for the DocCollapse jQuery plugin." />
+    <meta name="description" content="DocCollapse : Repository for the DocCollapse jQuery plugin." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="./javascripts/jquery.doccollapse.js"></script>
 
-    <title>Doccollapse</title>
+    <title>DocCollapse</title>
   </head>
 
   <body>
@@ -18,7 +20,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/TheConnMan/DocCollapse">View on GitHub</a>
 
-          <h1 id="project_title">Doccollapse</h1>
+          <h1 id="project_title">DocCollapse</h1>
           <h2 id="project_tagline">Repository for the DocCollapse jQuery plugin.</h2>
 
             <section id="downloads">
@@ -39,7 +41,48 @@
 <h1>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h1>
 
-<p><a href="https://theconnman.github.io/DocCollapse">theconnman.github.io/DocCollapse</a></p>
+<ul id="demo">
+  	<li>
+  		<h2>Doc Collapse Demo - Click Me</h2>
+  		<p>Here's some demo text.</p>
+  		<ul>
+  			<li>
+  				<h3>These headers were hidden!</h3>
+  				<p>...and I'm the hidden text!</p>
+  				<ul>
+  					<li>Don't worry,</li>
+  					<li>I know when lists</li>
+  					<li>contain other lists</li>
+  					<li>and don't collapse them.</li>
+  				</ul>
+  				<h4>I also know when other headers are present.</h4>
+  				<p>And I treat them like normal headers. Only the first header in a list item is changed.</p>
+  			</li>
+  			<li>
+  				<h5>Tiny header</h5>
+  				<p>
+  					The arrows change size depending on how big your header is.
+  				</p>
+  			</li>
+  			<li>
+  				<h3>What happens when anchors are referenced?</h3>
+    		<p><a href="#anchor">Click me</a> to find out.</p>
+    		<ul>
+    			<li>
+    				<h4>Don't mind me...</h4>
+    				<p>This happens when I'm linked to from an external page too.</p>
+    				<ul>
+    					<li>
+    						<h5 id="anchor">Success!</h5>
+    						<p>Did you click the link? The referenced header and all parent headers are opened.</p>
+    					</li>
+    				</ul>
+    			</li>
+    		</ul>
+  			</li>
+  		</ul>
+  	</li>
+</ul>
 
 <h1>
 <a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h1>
@@ -178,6 +221,7 @@
               var pageTracker = _gat._getTracker("UA-48858955-1");
             pageTracker._trackPageview();
             } catch(err) {}
+            $('#demo').docCollapse();
           </script>
 
 
