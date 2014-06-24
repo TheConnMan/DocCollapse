@@ -1,12 +1,10 @@
 DocCollapse
 ===========
 
-The DocCollapse plugin is a very small, simple plugin that helps collapse large bodies of text (e.g. software documentation) into a manageable, expandable set of nested headers and text. The inspiration for creating this plugin was my startup's website docs located at [augurworks.net](http://augurworks.net:8080/docs). Setup and usage is described below.
+The DocCollapse plugin is a very small, simple plugin that helps collapse large bodies of text (e.g. software documentation) into a manageable, expandable set of nested headers and text.
 
 # Demo #
-[augurworks.net](http://augurworks.net:8080/docs)
-
-The best demo is that of my startup. Feedback is greatly appreciated.
+[theconnman.github.io/DocCollapse](https://theconnman.github.io/DocCollapse)
 
 # Setup #
 
@@ -39,7 +37,7 @@ The above example isn't that exciting and rarely would you want to use DocCollap
 
 Once the content has been compressed it is a little difficult to reference. A link from another page (perhaps to a certain part of the docs with an anchor) would not help much if all the docs contents was compressed. This is where DocCollapse can help.
 
-A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessable docs. An example can be found in the demo or on my startup's website [here](http://augurworks.net:8080/docs#inputType).
+A URL with an anchor tag appended (think mywebsite.com/docs**#myContent**) where the anchored element in a hidden section will automatically have that element expanded. This means references to specific parts of your documentation will already be expanded when you link to them, saving you the trouble of both having large, unwieldy or compressed, unaccessable docs.
 
 That's about it. I've done the best I can to make sure content that shouldn't be formatted (i.e. unordered lists which don't have child headers) aren't formatted in ways they shouldn't, but please let me know all feedback you have.
 
