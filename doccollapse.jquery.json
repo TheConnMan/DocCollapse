@@ -9,7 +9,7 @@
     "collapsible",
     "menu"
   ],
-  "version": "0.2.7",
+  "version": "0.2.8",
   "author": {
     "name": "Brian Conn",
     "url": "https://github.com/theconnman"
@@ -27,10 +27,10 @@
     }
   ],
   "bugs": "https://github.com/TheConnMan/DocCollapse/issues",
-  "homepage": "http://theconnman.github.io/DocCollapse/",
-  "docs": "http://theconnman.github.io/DocCollapse/",
-  "demo": "http://theconnman.github.io/DocCollapse/",
-  "download": "https://github.com/TheConnMan/DocCollapse/archive/0.2.7.zip",
+  "homepage": "http://theconnman.com/DocCollapse/",
+  "docs": "http://theconnman.com/DocCollapse/",
+  "demo": "http://theconnman.com/DocCollapse/",
+  "download": "https://github.com/TheConnMan/DocCollapse/archive/0.2.8.zip",
   "dependencies": {
     "jquery": ">=1.4"
   }

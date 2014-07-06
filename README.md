@@ -4,7 +4,7 @@ DocCollapse
 The DocCollapse plugin is a very small, simple plugin that helps collapse large bodies of text (e.g. software documentation) into a manageable, expandable set of nested headers and text.
 
 # Demo #
-[theconnman.github.io/DocCollapse](https://theconnman.github.io/DocCollapse)
+[theconnman.github.io/DocCollapse](http://theconnman.com/DocCollapse)
 
 # Setup #
 
